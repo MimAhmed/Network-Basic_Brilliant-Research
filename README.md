@@ -1,6 +1,3 @@
-# Network-Basic_Brilliant-Research
-Networking Basic (Brilliant Cloud-Research)
-
 # Networking Basics
 
 This Documentation is a part of Brillant Cloud Research.
@@ -89,10 +86,26 @@ IP version 6 is the new version of Internet Protocol, which is way better than I
 Photo Credit : Geeksforgeeks
 ![ipv6](https://i.ibb.co/nfQpRfM/1920px-Ipv6-address-leading-zeros-svg.png)
 Photo Credit : wikipedia
+## Difference between IPV4 vs IPV6.
+IPv4 & IPv6 are both IP addresses that are binary numbers. IPv4 is 32 bit binary number while IPv6 is 128 bit binary number address. IPv4 address are separated by periods while IPv6 address are separated by colons.
+
+Both are used to identify machines connected to a network. In principle, they are the same, but they are different in how they work.
+## KEY DIFFERENCE
+
+-   IPv4 is 32-Bit IP address whereas IPv6 is a 128-Bit IP address.
+-   IPv4 is a numeric addressing method whereas IPv6 is an alphanumeric addressing method.
+-   IPv4 binary bits are separated by a dot(.) whereas IPv6 binary bits are separated by a colon(:).
+-   IPv4 offers 12 header fields whereas IPv6 offers 8 header fields.
+-   IPv4 supports broadcast whereas IPv6 doesn’t support broadcast.
+-   IPv4 has checksum fields while IPv6 doesn’t have checksum fields
+-   IPv4 supports VLSM (Virtual Length Subnet Mask) whereas IPv6 doesn’t support VLSM.
+-   IPv4 uses ARP (Address Resolution Protocol) to map to MAC address whereas IPv6 uses NDP (Neighbour Discovery Protocol) to map to MAC address.
 ## What is Network Interface?
 
 In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **network interface** is a software or hardware [interface](https://en.wikipedia.org/wiki/Interface_(computing) "Interface (computing)") between two pieces of equipment or [protocol layers](https://en.wikipedia.org/wiki/Protocol_layer "Protocol layer") in a [computer network](https://en.wikipedia.org/wiki/Computer_network)
 A network interface can refer to any kind of software interface to networking hardware. For instance, if you have two network cards in your computer, you can control and configure each network interface associated with them individually.
+## What is loopback interface?
+The **loopback** device is a special, virtual network **interface** that your computer **uses to** communicate with itself. It is **used** mainly for diagnostics and troubleshooting, and to connect to servers running on the local machine.
 
 
 ## What is Hop (in networking)?
@@ -183,4 +196,58 @@ To know more read this article: [https://sookocheff.com/post/networking/how-does
 ![dns](https://i.ibb.co/mzzhM89/file.png)
 
 ## What is CIDR?
-CIDR, which stands for Classless Inter-Domain Routing, is an IP addressing scheme that improves the allocation of IP addresses. It replaces the old system based on classes A, B, and C. This scheme also helped greatly **extend the life of IPv4** as well as slow the growth of routing tables.
+Classless Inter-Domain Routing (CIDR), also called supernetting, is a way to more flexibly allocate Internet Protocol (IP) addresses by creating unique and more granular identifiers for networks and individual devices. It was introduced in 1993 as an alternative to Internet routers that managed network traffic based on the class of IP addresses and determined subnetworks, for routing, based on IP address class.
+
+![CIDR](https://i.ibb.co/T01DdC5/image.png)
+Photo Credit : Cisco
+## CIDR Background
+The objective of CIDR was to address scalability issues with classful IP addresses which are based on three classes – Class A, Class B, and Class C. It is the capacity of each IP address class that creates scalability issues. Class A capacity is 16,581,375 IP addresses; Class B is 65,536 IP addresses; and Class C is 256 IP addresses. Using classful addressing led to inefficiencies in address use and routing, because of the rigid limitations of the classes (e.g., if 300 addresses were needed, Class B would be required leaving 16,281 unused). CIDR allows IP addresses to be variable and not bound by the size limitations of Classes A, B, and C.
+## How CIDR wroks?
+CIDR is based on variable-length subnet masking (VLSM). This allows it to define prefixes of arbitrary lengths making it much more efficient than the old system. CIDR IP addresses are composed of two sets of numbers. The network address is written as a prefix, like you would see a normal IP address (e.g. 192.255.255.255). The second part is the suffix which indicates how many bits are in the entire address (e.g. /12). Putting it together, a CIDR IP address would look like the following:
+
+```
+192.255.255.255/12
+```
+
+The network prefix is also specified as part of the IP address. This varies depending upon the number of bits required. Therefore, taking the example above, we can say that the first 12 bits are the network part of the address while the last 20 bits are for host addresses.
+
+# Resources Use For This Research
+https://www.britannica.com/technology/TCP-IP
+
+https://codeburst.io/understanding-tcp-internals-step-by-step-for-software-engineers-system-designers-part-1-df0c10b86449
+
+https://www.digitalocean.com/community/tutorials/an-introduction-to-networking-terminology-interfaces-and-protocols
+
+https://www.juniper.net/documentation/en_US/junos/topics/concept/interface-security-loopback-understanding.html
+
+https://networkencyclopedia.com/hop-networking/
+
+
+https://www.wikiwand.com/en/Hop_(networking)
+
+https://www.comparitech.com/net-admin/network-latency-testing-tools/
+
+https://medium.com/@User3141592/how-does-the-internet-work-edc2e22e7eb8
+
+https://community.spiceworks.com/topic/1135690-does-a-router-operate-on-layer-2-as-well
+
+https://community.fs.com/blog/layer-3-switch-vs-router-what-is-your-best-bet.html
+
+https://www.oreilly.com/library/view/cisco-ios-in/156592942X/ch05s03.html
+
+https://www.avast.com/c-ipv4-vs-ipv6-addresses
+
+https://www.guru99.com/difference-ipv4-vs-ipv6.html
+
+https://academy.apnic.net/en/online-courses/
+
+https://www.internetsociety.org/deploy360/ipv6/
+
+https://www.netmanias.com/en/post/blog/6348/arp-ip-routing-network-protocol-switching/switching-and-routing-part-3-l2-ethernet-switching-by-l3-
+
+https://computer.howstuffworks.com/dns.htm
+
+https://www.verisign.com/en_US/website-presence/online/how-dns-works/index.xhtml
+
+https://www.networkworld.com/article/3299438/dhcp-defined-and-how-it-works.html
+[https://aviatrix.com/learn-center/glossary/cidr/](https://aviatrix.com/learn-center/glossary/cidr/)
